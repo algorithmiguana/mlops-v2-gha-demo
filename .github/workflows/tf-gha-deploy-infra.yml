@@ -4,7 +4,18 @@ on:
   workflow_dispatch:
 env:
     config_env: 'none'
+
+
 jobs:
+
+  print:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Run a one-line script
+      run: echo Hello, world!
+    
   get-config:
       uses: Azure/mlops-templates/.github/workflows/read-yaml.yml@main
       with:
